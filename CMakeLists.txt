@@ -13,19 +13,18 @@ set(CMAKE_AUTORCC ON)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 find_package(Qt5Quick REQUIRED)
 
-include_directories(D:/3rdlib/libdxfrw-0.6.3/src)
-link_directories(D:/3rdlib/libdxfrw-0.6.3/vs2013/x64/Debug)
+#
+include_directories(D:/fhyPayaso/workspace/Code/AutoCADReader/include)
+link_directories(D:/fhyPayaso/workspace/Code/AutoCADReader/lib)
 
 add_executable(AutoCADReader main.cpp MainWindow.cpp MainWindow.h ui_mainwindow.h
         libdxfrw/dx_data.h
         libdxfrw/dx_iface.h
         libdxfrw/dx_iface.cpp
-
         OpenGLWidget.cpp OpenGLWidget.h DwgObject.cpp DwgObject.h)
 
 #####################  添加静态库 #####################
